@@ -1,0 +1,7 @@
+# Requirements for ViTPose vs HRNet comparison
+torch
+torchvision
+numpy
+opencv-python
+matplotlib
+tqdm

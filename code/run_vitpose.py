@@ -1,29 +1,31 @@
 from mmpose.apis import init_model, inference_topdown
-import mmpretrain  # 👈 IMPORTANT: triggers registry registration
+import mmpretrain
 import os
 import cv2
+import time
 
 BASE = os.path.dirname(os.path.dirname(__file__))
+
 img_path = os.path.join(BASE, "data", "demo.jpg")
 
-config = os.path.join(
-    BASE,
-    "mmpose/configs/body_2d_keypoint/topdown_heatmap/coco/"
-    "td-hm_ViTPose-small_8xb64-210e_coco-256x192.py"
-)
+config = "mmpose/configs/body_2d_keypoint/topdown_heatmap/coco/td-hm_ViTPose-small_8xb64-210e_coco-256x192.py"
 
 checkpoint = r"C:\Users\user\.cache\mim\td-hm_ViTPose-small_8xb64-210e_coco-256x192-62d7a712_20230314.pth"
 
-out_path = os.path.join(BASE, "results", "vitpose.jpg")
+out_path = os.path.join(BASE, "results", "vitpose", "vitpose_result.jpg")
 os.makedirs(os.path.dirname(out_path), exist_ok=True)
 
 # load model
 model = init_model(config, checkpoint, device="cpu")
 
-# inference
+# inference with timing
+start = time.time()
 result = inference_topdown(model, img_path)
+end = time.time()
 
-# --- SAME SIMPLE VISUALIZATION STYLE AS HRNET ---
+print("Inference time:", end - start)
+
+# visualization
 img = cv2.imread(img_path)
 
 for person in result:

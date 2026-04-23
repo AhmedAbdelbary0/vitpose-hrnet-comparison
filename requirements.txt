@@ -1,7 +1,15 @@
-# Requirements for ViTPose vs HRNet comparison
+# Core Dependencies
 torch
 torchvision
 numpy
 opencv-python
 matplotlib
 tqdm
+psutil
+
+# OpenMMLab Stack
+mmengine
+mmcv>=2.0.0
+mmpose>=1.0.0
+mmpretrain
+

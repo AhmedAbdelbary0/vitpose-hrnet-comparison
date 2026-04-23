@@ -18,7 +18,7 @@ config = os.path.join(
 
 checkpoint = "https://download.openmmlab.com/mmpose/top_down/hrnet/hrnet_w32_coco_256x192-c78dce93_20200708.pth"
 
-out_dir = os.path.join(BASE, "results", "hrnet")
+out_dir = os.path.join(BASE, "results", "hrnet_w32")
 os.makedirs(out_dir, exist_ok=True)
 
 # load model

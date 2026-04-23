@@ -13,7 +13,7 @@ img_paths = glob.glob(os.path.join(data_dir, "*.jpg"))
 config = "mmpose/configs/body_2d_keypoint/topdown_heatmap/coco/td-hm_ViTPose-base_8xb64-210e_coco-256x192.py"
 checkpoint = "https://download.openmmlab.com/mmpose/v1/body_2d_keypoint/topdown_heatmap/coco/td-hm_ViTPose-base_8xb64-210e_coco-256x192-216eae50_20230314.pth"
 
-out_dir = os.path.join(BASE, "results", "vitpose")
+out_dir = os.path.join(BASE, "results", "vitpose_base")
 os.makedirs(out_dir, exist_ok=True)
 
 # load model

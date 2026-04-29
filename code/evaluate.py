@@ -112,6 +112,12 @@ def main():
             "resolution": "384x288",
             "config": "configs/hrnet/hrnet_w48_coco_384x288.py",
             "ckpt": "https://download.openmmlab.com/mmpose/v1/body_2d_keypoint/topdown_heatmap/coco/td-hm_hrnet-w48_8xb32-210e_coco-384x288-c161b7de_20220915.pth"
+        },
+        {
+            "name": "ViTPose-base-384",
+            "resolution": "384x288",
+            "config": "configs/vitpose_base_384x288.py",
+            "ckpt": "checkpoints/vitpose_base_384x288_patched.pth"
         }
     ]
 

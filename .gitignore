@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Data and Results
+data/
+results/
+work_dirs/
+checkpoints/
+
+# Downloaded files
+*.pth
+*.zip
+*.json
+
+# LaTeX artifacts
+*.aux
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.toc
+*.blg
+*.bbl
+
+# Conference Template (as requested)
+conference_101719.tex
+
+# IDE Settings
+.vscode/
+.idea/
